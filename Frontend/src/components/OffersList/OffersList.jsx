@@ -20,7 +20,7 @@ const OffersList = () => {
     async function infoProfil() {
       try {
         const foundUserData = await sendRequest(
-          `http://localhost:5000/users/find/${auth.user}`,
+          REACT_APP_BACKEND_URL + `users/find/${auth.user}`,
           "GET",
           null,
           {

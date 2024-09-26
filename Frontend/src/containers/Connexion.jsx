@@ -22,12 +22,12 @@ export default function Connexion() {
           let response;
           if (typeCompte === "Candidat") {
 
-            response = await axios.get("http://localhost:5000/offres");
+            response = await axios.get(REACT_APP_BACKEND_URL + "offres");
           } else if (typeCompte === "Employeur") {
 
             const employeurId = "66f1d6d0dbe127215621f263";
             response = await axios.get(
-              `http://localhost:5000/offres/${employeurId}`
+              REACT_APP_BACKEND_URL + `offres/${employeurId}`
             );
           }
           setOffers(response.data.offres);
