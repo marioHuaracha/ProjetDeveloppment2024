@@ -19,7 +19,7 @@ export default function Login(props) {
         console.log("data ", data);
         event.target.reset();
         try {
-            const response = await fetch("http://localhost:5000/users/login", {
+            const response = await fetch(REACT_APP_BACKEND_URL + '/users/login', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
