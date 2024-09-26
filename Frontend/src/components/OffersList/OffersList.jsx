@@ -20,7 +20,7 @@ const OffersList = () => {
     async function infoProfil() {
       try {
         const foundUserData = await sendRequest(
-          REACT_APP_BACKEND_URL + `users/find/${auth.user}`,
+          process.env.REACT_APP_BACKEND_URL + `users/find/${auth.user}`,
           "GET",
           null,
           {
