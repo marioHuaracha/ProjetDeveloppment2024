@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 });
 app.use(errorHandler);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 const uri =
   process.env.MONGODB_URI ||
   "mongodb+srv://2265470:i8Fm7j4giBKmbfgm@jobbang-bd.ybvsp.mongodb.net/?retryWrites=true&w=majority&appName=jobbang-bd";
