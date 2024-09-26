@@ -1,10 +1,9 @@
 import React, { useContext, useState } from "react";
 import { useHttpClient } from "../hooks/http-hook";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../components/context/AuthContext";
 
 const AddOffer = (props) => {
-
   const { sendRequest } = useHttpClient();
 
   const auth = useContext(AuthContext);
@@ -38,17 +37,17 @@ const AddOffer = (props) => {
 
   return (
     <form onSubmit={addOffreSubmitHandler}>
-            <div>
-                <label>Titre :</label>
-                <input type="titre" name="titre" required />
-            </div>
-            <div>
-                <label>Email :</label>
-                <input type="email" name="email" required />
-            </div>
+      <div>
+        <label>Titre :</label>
+        <input type="titre" name="titre" required />
+      </div>
+      <div>
+        <label>Email :</label>
+        <input type="email" name="email" required />
+      </div>
 
-            <button type="submit">Créer</button>
-            <button onClick={() => navigate("/offres")}>Retour</button>
+      <button type="submit">Créer</button>
+      <button onClick={() => navigate("/offres")}>Retour</button>
     </form>
   );
 };
